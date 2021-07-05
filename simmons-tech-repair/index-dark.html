@@ -1,0 +1,54 @@
+<!--
+Ben Simmons 3/6/21
+
+URL: students.imsa.edu/~bsimmons1
+
+This website is a page for my small phone repair business. I have removed all personal information except the name of the business and my last name, which you need to access the site in the first place.
+
+I decided to make both a dark theme and a light theme because I like when websites have a dark theme. However, since more elegant solutions like changing which CSS file you use won't stay across pages without a backend, I decided to just create two nearly identical HTML files for each page.
+
+I also tried to follow Material Design guidelines as well as I could. The animations for buttons and tabs were too much for me, but I tried to keep the general idea and retain the depth that Material Design tries to show. This is why I added shadows to nearly everything and, in the dark theme, why I used a lighter color for "higher" elements.
+
+Also, on pages that scroll (mainly the Previous Repairs page but also other pages on a small screen), the navigation bar hides the title but keeps the main navigation tabs and the dark/light mode switcher. This was not as hard as I expected but I'm still somewhat proud of it.
+
+Sources: 
+https://www.computerhope.com/issues/ch000074.htm for removing the underline on links to pages you're not currently on
+https://material.io/resources/icons/?icon=stay_current_portrait&style=baseline for the icons. I used the phone icon for my favicon and other icons here for nearly every icon on my page.
+https://material.io/design/color/the-color-system.html#color-theme-creation for the guide to the Material Design color scheme
+https://material.io/design/color/dark-theme.html for the dark theme color scheme
+https://stackoverflow.com/questions/3593594/how-to-keep-the-header-static-always-on-top-while-scrolling for the header bar which partially slides back while scrolling
+-->
+<!DOCTYPE html>
+<html> 
+    <head> <!--Since everything in <head> is nearly identical across pages, I'll only comment it once.-->
+        <link rel="stylesheet" href="styles-dark.css">
+        <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico"> <!--The Material Design phone icon.-->
+        <style>
+            #home { /*This is here to underline and bold the page you're currently on in the tab strip. It wouldn't work in the centralized CSS file because that applies to every page, not just this one, so I have it here.*/
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="heading"><!--Again, this heading is nearly identical on all pages. I'll only comment it once.-->
+            <h1>Simmons Tech Repair</h1>
+            <a href="index.html" title="Light mode"><img id="light-dark-mode" src="./website-images/baseline_light_mode_white_18dp.png"></a><!--Since I can't create a backend to store the dark/light mode value across pages, I have created separate pages for each. It's not as nice but it works. Also, I used a Material Design icon.-->
+            <h2 id="home" class="pages"><a href="index-dark.html">Home</a></h2>
+            <h2 id="pricing" class="pages"><a href="pricing-dark.html">Pricing</a></h2>
+            <h2 id="repairs" class="pages"><a href="repairs-dark.html">Previous Repairs</a></h2>
+            <h2 id="contact" class="pages"><a href="contact-dark.html">Contact</a></h2>
+        </div>
+        <div class="body-segment" style="background-color: #FF0000; color: #FFFFFF;"> <!--The red background color and white text color are recommended for this kind of disclaimer by the Material Design Guidelines.-->
+            <h2>DISCLAIMER</h2>
+            <p>This website is not real. It is for an assignment. Some information may be accurate but it should not be relied on.</p>
+        </div>
+        <div class="body-segment"> <!--The body-segment class is basically for each "chunk" of information. It follows Material Design guidelines as well as I could manage.-->
+            <p>I can replace screens and batteries on mobile devices as well as troubleshooting and repairing most devices. I can also upgrade desktops and some laptops to make them faster. I am able to build computers as well to your specifications, and to help you select an appropriate computer to buy. If I can't figure out the problem with your device, you don't need to pay. Free estimates are available. If you want me to repair a device, please contact me.</p>
+        </div>
+        <div class="body-segment">
+            <img src="./website-images/6-9-20.1.jpg"> <!--I've date-coded each image and put them in specific folders.-->
+            <img src="./website-images/6-9-20.2.jpg">
+        </div>
+    </body>
+</html>

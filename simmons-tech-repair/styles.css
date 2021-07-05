@@ -1,0 +1,72 @@
+/*
+Ben Simmons 3/6/21
+This website is a page for my small phone repair business. I have removed all personal information except the name of the business and my last name, which you need to access the site in the first place.
+*/
+body {
+    background-color: white;
+    padding: 0; /*If I didn't do these two lines, the header bar wouldn't work correctly. It wouldn't touch the edges.*/
+    margin: 0;
+    font-family: 'Roboto'; /*Another Material Design thing.*/
+    font-weight: normal; /*Another Material Design thing.*/
+    font-size: 16px; /*Another Material Design thing.*/
+}
+#heading {
+    background-color: #6200EE; /*This is a Material Design color and purple is my favorite color so I chose it.*/
+    color: white;
+    text-align: center;
+    padding: 1px;
+    box-shadow: 0 3px 5px #000000;
+    position: sticky;
+    top: -70px;
+}
+h1 {
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+h2 {
+    margin-left: 5px;
+    font-weight: normal;
+    font-size: 20px;
+}
+.body-segment {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /*This shadow allows for perceived depth in the website.*/
+    border-radius: 5px; /*Rounded corners are a Material Design thing.*/
+    margin-left: auto; /*Center it*/
+    margin-right: auto;
+    margin-top: 1em;
+    padding: 5px;
+    padding-top: 1px;
+    width: 500px;
+    margin-bottom: 1em;
+}
+#light-dark-mode {
+    cursor: pointer; /*Make your cursor the pointer shape*/
+    position: fixed; /*Make it stay in the same place while the rest of the navbar moves up*/
+    right: 5px;
+    top: 5px;
+}
+form {
+    margin: 5px;
+}
+.pages {
+    display: inline-block;
+    margin-right: 1em;
+}
+.pages > a {
+    text-decoration: none;
+    color: white;
+}
+div > img {
+    max-width: 470px; /*This whole thing is making the images look correct. They have rounded corners, are centered, have padding, and are the right size.*/
+    max-height: 320px;
+    border-radius: 5px;
+    padding: 2px;
+}
+.example-images {
+    text-align: center;
+}
+p {
+    margin-left: 5px;
+    margin-right: 5px;
+}

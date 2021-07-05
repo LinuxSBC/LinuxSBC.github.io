@@ -1,0 +1,54 @@
+<!--
+Ben Simmons 3/6/21
+This website is a page for my small phone repair business. I have removed all personal information except the name of the business and my last name, which you need to access the site in the first place.
+-->
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link rel="stylesheet" href="styles-dark.css">
+        <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico">
+        <style>
+            #contact {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="heading">
+            <h1>Simmons Tech Repair</h1>
+            <a href="contact.html" title="Light mode"><img id="light-dark-mode" src="./website-images/baseline_light_mode_white_18dp.png"></a><!--Since I can't create a backend to store the dark/light mode value across pages, I have created separate pages for each. It's not as nice but it works.-->
+            <h2 id="home" class="pages"><a href="index-dark.html">Home</a></h2>
+            <h2 id="pricing" class="pages"><a href="pricing-dark.html">Pricing</a></h2>
+            <h2 id="repairs" class="pages"><a href="repairs-dark.html">Previous Repairs</a></h2>
+            <h2 id="contact" class="pages"><a href="contact-dark.html">Contact</a></h2>
+        </div>
+        <div class="body-segment">
+            <h2>Please contact me for my services.</h2>
+            <ul>
+                <li>Facebook: <img src="./website-images/Facebook-logo.png"> <a href="https://www.facebook.com">Simmons Tech Repair</a></li> <!--This just links to facebook.com, not my actual Facebook page, because of the "no personal information" thing. People could probably find it if they needed to, but I thought it would be better to not have the link.-->
+                <li>Email: myemail@example.com</li>
+                <li>Phone: (000)-000-0000</li>
+            </ul>
+        </div>
+        <div class="body-segment">
+            <h2>Request a job</h2>
+            <form action="formdata-dark.html" method="GET">
+                Full Name: <input type="text"><br><br>
+                Contact Information (email, phone number, etc.): <input type="text"><br><br>
+                Device Type (Phone, tablet, laptop, desktop, etc.): <input type="text"><br><br>
+                Device Brand and Model: <input type="text"><br><br>
+                Service Needed: <br>
+                <label><input type="radio" name="service-needed">Screen Replacement</label><br>
+                <label><input type="radio" name="service-needed">Battery Replacement</label><br>
+                <label><input type="radio" name="service-needed">Other Repair</label><br>
+                <label><input type="radio" name="service-needed">Upgrade</label><br>
+                <label><input type="radio" name="service-needed">Other: <input type="text"></label><br><br>
+                Is the device usable as it is? <label><input type="radio" name="functional">Yes</label><label><input type="radio" name="functional">No</label><br><br>
+                Could you be without the device for a week? <label><input type="radio" name="functional">Yes</label><label><input type="radio" name="functional">No</label><br><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+    </body>
+</html>
