@@ -37,7 +37,7 @@ h2 {
     margin-top: 1em;
     padding: 5px;
     padding-top: 1px;
-    width: 500px;
+    max-width: 500px;
     margin-bottom: 1em;
 }
 #light-dark-mode {
@@ -58,7 +58,7 @@ form {
     color: white;
 }
 div > img {
-    max-width: 470px; /*This whole thing is making the images look correct. They have rounded corners, are centered, have padding, and are the right size.*/
+    max-width: 48%; /*This whole thing is making the images look correct. They have rounded corners, are centered, have padding, and are the right size.*/
     max-height: 320px;
     border-radius: 5px;
     padding: 2px;
