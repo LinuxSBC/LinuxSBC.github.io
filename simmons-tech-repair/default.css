@@ -14,7 +14,7 @@
         padding: 1px;
         box-shadow: 0 3px 5px #000000;
         position: sticky;
-        top: -70px;
+        top: -80px;
     }
     .body-segment {
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /*This shadow allows for perceived depth in the website.*/
@@ -62,7 +62,7 @@
         padding: 1px;
         box-shadow: 0 3px 5px #000000; /*This shadow allows for perceived depth in the website.*/
         position: sticky; /*Keeps it at the top of the screen while scrolling.*/
-        top: -70px; /*Makes it so that the title hides itself while scrolling.*/
+        top: -80px; /*Makes it so that the title hides itself while scrolling.*/
     }
     a {
         color: #BB86FC; /*This is a Material Design color and purple is my favorite color so I chose it.*/

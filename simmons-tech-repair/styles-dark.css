@@ -14,7 +14,7 @@ body {
     padding: 1px;
     box-shadow: 0 3px 5px #000000; /*This shadow allows for perceived depth in the website.*/
     position: sticky; /*Keeps it at the top of the screen while scrolling.*/
-    top: -70px; /*Makes it so that the title hides itself while scrolling.*/
+    top: -80px; /*Makes it so that the title hides itself while scrolling.*/
 }
 h1 {
     font-weight: normal;
