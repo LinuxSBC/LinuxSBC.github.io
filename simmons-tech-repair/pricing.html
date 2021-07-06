@@ -15,11 +15,51 @@ This website is a page for my small phone repair business. I have removed all pe
                 text-decoration: underline;
             }
         </style>
+        <script>
+            function createCookie(key, value) {
+                const d = new Date();
+                d.setTime(d.getTime() + (30*24*60*1000))
+                let expires = "expires="+ d.toUTCString();
+                document.cookie = key + "=" + value + ";" + expires + ";path=/";
+            }
+            function getCookie(key) {
+                let name = key + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(";");
+                for(let i=0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == " ") {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length)
+                    }
+                }
+                return "";
+            }
+            themeValue = getCookie("theme");
+            if (themeValue == "light") {
+                document.getElementsByTagName("link")[0].setAttribute("href", "styles.css");
+            }
+            if (themeValue == "dark") {
+                document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
+            }
+            function toggleTheme() {
+                var theme = document.getElementsByTagName("link")[0];
+                if (theme.getAttribute("href") == "styles.css") {
+                    theme.setAttribute("href", "styles-dark.css");
+                    createCookie("theme", "dark");
+                } else {
+                    theme.setAttribute("href", "styles.css");
+                    createCookie("theme", "light");
+                }
+            }
+        </script>
     </head>
     <body>
         <div id="heading">
             <h1>Simmons Tech Repair</h1>
-            <a href="pricing-dark.html" title="Dark mode"><img id="light-dark-mode" src="./website-images/baseline_dark_mode_white_18dp.png"></a><!--Since I can't create a backend to store the dark/light mode value across pages, I have created separate pages for each. It's not as nice but it works.-->
+            <button onclick="toggleTheme()" title="Switch theme" id="modeSwitchButton"></button><!--Since I can't create a backend to store the dark/light mode value across pages, I have created separate pages for each. It's not as nice but it works.-->
             <h2 id="home" class="pages"><a href="index.html">Home</a></h2>
             <h2 id="pricing" class="pages"><a href="pricing.html">Pricing</a></h2>
             <h2 id="repairs" class="pages"><a href="repairs.html">Previous Repairs</a></h2>
