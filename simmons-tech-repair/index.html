@@ -30,25 +30,12 @@ https://stackoverflow.com/questions/3593594/how-to-keep-the-header-static-always
                 font-weight: bold;
                 text-decoration: underline;
             }
-            #modeSwitchButton {
-                background-image: url(website-images/baseline_dark_mode_white_18dp.png);
-                background-repeat: no-repeat;
-                background-position: 50% 50%;
-                background-color: transparent;
-                height: 36px;
-                width: 36px;
-                border: none;
-                cursor: pointer;
-                position: fixed; /*Make it stay in the same place while the rest of the navbar moves up*/
-                right: 5px;
-                top: 5px;
-            }
         </style>
     </head>
     <body>
         <div id="heading"> <!--Again, this heading is nearly identical on all pages. I'll only comment it once.-->
             <h1>Simmons Tech Repair</h1>
-            <button onclick="prompt('test')" title="Dark mode" id="modeSwitchButton"></button><!--Since I can't create a backend to store the dark/light mode value across pages, I have created separate pages for each. It's not as nice but it works. Also, I used a Material Design icon.-->
+            <button onclick="toggleTheme()" title="Dark mode" id="modeSwitchButton"></button><!--Since I can't create a backend to store the dark/light mode value across pages, I have created separate pages for each. It's not as nice but it works. Also, I used a Material Design icon.-->
             <h2 id="home" class="pages"><a href="index.html">Home</a></h2>
             <h2 id="pricing" class="pages"><a href="pricing.html">Pricing</a></h2>
             <h2 id="repairs" class="pages"><a href="repairs.html">Previous Repairs</a></h2>
@@ -69,6 +56,15 @@ https://stackoverflow.com/questions/3593594/how-to-keep-the-header-static-always
                 console.log("Creating new cookie with key: " + key + "value: " + value);
             }
             createCookie("darkMode", "false");
+            function toggleTheme() {
+                var theme = document.getElementsByTagName("link")[0];
+                if (theme.getAttribute("href") == "styles.css");{
+                    theme.setAttribute("href", "styles-dark.css");
+                } 
+                else {
+                    theme.setAttribute("href", "styles.css");
+                }
+            }
         </script>
     </body>
 </html>
