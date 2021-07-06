@@ -30,6 +30,9 @@ h2 {
     font-weight: normal;
     font-size: 20px;
 }
+#subtitle {
+    margin: 0;
+}
 a {
     color: #BB86FC; /*This is a Material Design color and purple is my favorite color so I chose it.*/
 }
