@@ -45,8 +45,15 @@ a {
     max-width: 500px;
     margin-bottom: 1em;
 }
-#light-dark-mode {
-    cursor: pointer; /*Make your cursor the pointer shape*/
+#modeSwitchButton {
+    background-image: url(website-images/baseline_light_mode_white_18dp.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: transparent;
+    height: 36px;
+    width: 36px;
+    border: none;
+    cursor: pointer;
     position: fixed; /*Make it stay in the same place while the rest of the navbar moves up*/
     right: 5px;
     top: 5px;
