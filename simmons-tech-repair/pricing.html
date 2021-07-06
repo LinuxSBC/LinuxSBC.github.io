@@ -44,9 +44,15 @@
                 if (theme.getAttribute("href") == "styles.css") {
                     theme.setAttribute("href", "styles-dark.css");
                     createCookie("theme", "dark");
-                } else {
+                } else if (theme.getAttribute("href") == "styles-dark.css") {
                     theme.setAttribute("href", "styles.css");
                     createCookie("theme", "light");
+                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    theme.setAttribute("href", "styles.css");
+                    createCookie("theme", "light");
+                } else {
+                    theme.setAttribute("href", "styles-dark.css");
+                    createCookie("theme", "dark");
                 }
             }
         </script>
