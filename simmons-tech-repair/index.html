@@ -35,7 +35,7 @@ https://stackoverflow.com/questions/3593594/how-to-keep-the-header-static-always
     <body>
         <div id="heading"> <!--Again, this heading is nearly identical on all pages. I'll only comment it once.-->
             <h1>Simmons Tech Repair</h1>
-            <a href="index-dark.html" title="Dark mode"><img id="light-dark-mode" src="./website-images/baseline_dark_mode_white_18dp.png"></a><!--Since I can't create a backend to store the dark/light mode value across pages, I have created separate pages for each. It's not as nice but it works. Also, I used a Material Design icon.-->
+            <input type="button" title="Dark mode"><img id="light-dark-mode" src="./website-images/baseline_dark_mode_white_18dp.png"></input><!--Since I can't create a backend to store the dark/light mode value across pages, I have created separate pages for each. It's not as nice but it works. Also, I used a Material Design icon.-->
             <h2 id="home" class="pages"><a href="index.html">Home</a></h2>
             <h2 id="pricing" class="pages"><a href="pricing.html">Pricing</a></h2>
             <h2 id="repairs" class="pages"><a href="repairs.html">Previous Repairs</a></h2>
@@ -48,5 +48,14 @@ https://stackoverflow.com/questions/3593594/how-to-keep-the-header-static-always
             <img src="./website-images/6-9-20.1.jpg"> <!--I've date-coded each image and put them in specific folders.-->
             <img src="./website-images/6-9-20.2.jpg">
         </div>
+        <script>
+            function createCookie(key, value) {
+                const cookie = escape(key) + "=" + escape(value) + ";";
+                document.cookie = cookie;
+                console.log(cookie);
+                console.log("Creating new cookie with key: " + key + "value: " + value);
+            }
+            createCookie("darkMode", "false");
+        </script>
     </body>
 </html>
