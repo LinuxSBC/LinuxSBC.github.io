@@ -1,7 +1,3 @@
-<!--
-Ben Simmons 3/6/21
-This website is a page for my small phone repair business. I have removed all personal information except the name of the business and my last name, which you need to access the site in the first place.
--->
 <!DOCTYPE html>
 <html>
     <head>
@@ -59,7 +55,7 @@ This website is a page for my small phone repair business. I have removed all pe
     <body>
         <div id="heading">
             <h1>Simmons Tech Repair</h1>
-            <button onclick="toggleTheme()" title="Switch theme" id="modeSwitchButton"></button><!--Since I can't create a backend to store the dark/light mode value across pages, I have created separate pages for each. It's not as nice but it works.-->
+            <button onclick="toggleTheme()" title="Switch theme" id="modeSwitchButton"></button>
             <h2 id="home" class="pages"><a href="index.html">Home</a></h2>
             <h2 id="pricing" class="pages"><a href="pricing.html">Pricing</a></h2>
             <h2 id="repairs" class="pages"><a href="repairs.html">Previous Repairs</a></h2>
@@ -68,29 +64,10 @@ This website is a page for my small phone repair business. I have removed all pe
         <div class="body-segment">
             <h2>Please contact me for my services.</h2>
             <ul>
-                <li>Facebook: <img src="./website-images/Facebook-logo.png"> <a href="https://www.facebook.com">Simmons Tech Repair</a></li> <!--This just links to facebook.com, not my actual Facebook page, because of the "no personal information" thing. People could probably find it if they needed to, but I thought it would be better to not have the link.-->
-                <li>Email: myemail@example.com</li>
-                <li>Phone: (000)-000-0000</li>
+                <li>Facebook (preferred): <img src="./website-images/Facebook-logo.png"> <a href="https://www.facebook.com/Simmons-Tech-Repair-Monmouth-IL-101092741613487">Simmons Tech Repair</a></li>
+                <li>Email: benedict.p.simmons@gmail.com</li>
+                <li>Phone: (309)-444-6214</li>
             </ul>
-        </div>
-        <div class="body-segment">
-            <h2>Request a job</h2>
-            <form action="formdata.html" method="GET">
-                Full Name: <input type="text"><br><br>
-                Contact Information (email, phone number, etc.): <input type="text"><br><br>
-                Device Type (Phone, tablet, laptop, desktop, etc.): <input type="text"><br><br>
-                Device Brand and Model: <input type="text"><br><br>
-                Service Needed: <br>
-                <label><input type="radio" name="service-needed">Screen Replacement</label><br>
-                <label><input type="radio" name="service-needed">Battery Replacement</label><br>
-                <label><input type="radio" name="service-needed">Other Repair</label><br>
-                <label><input type="radio" name="service-needed">Upgrade</label><br>
-                <label><input type="radio" name="service-needed">Other: <input type="text"></label><br><br>
-                Is the device usable as it is? <label><input type="radio" name="functional">Yes</label><label><input type="radio" name="functional">No</label><br><br>
-                Could you be without the device for a week? <label><input type="radio" name="functional">Yes</label><label><input type="radio" name="functional">No</label><br><br>
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-            </form>
         </div>
     </body>
 </html>
