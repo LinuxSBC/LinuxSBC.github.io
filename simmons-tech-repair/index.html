@@ -59,11 +59,6 @@ https://stackoverflow.com/questions/3593594/how-to-keep-the-header-static-always
             } else if (themeValue == "light") {
                 document.getElementsByTagName("link")[0].setAttribute("href", "styles.css");
             }
-            // } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            //     document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
-            // } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-            //     document.getElementsByTagName("link")[0].setAttribute("href", "styles.css")
-            // }
             function toggleTheme() {
                 var theme = document.getElementsByTagName("link")[0];
                 if (theme.getAttribute("href") == "styles.css") {

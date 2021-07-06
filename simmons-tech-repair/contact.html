@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simmons Tech Repair</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="default.css">
         <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico">
             <style>
             #contact {
@@ -36,8 +36,7 @@
             themeValue = getCookie("theme");
             if (themeValue == "light") {
                 document.getElementsByTagName("link")[0].setAttribute("href", "styles.css");
-            }
-            if (themeValue == "dark") {
+            } else if (themeValue == "dark") {
                 document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
             }
             function toggleTheme() {

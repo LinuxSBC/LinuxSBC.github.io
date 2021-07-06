@@ -7,7 +7,7 @@ This website is a page for my small phone repair business. I have removed all pe
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simmons Tech Repair</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="default.css">
         <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico">
         <style>
             #repairs {
@@ -40,8 +40,7 @@ This website is a page for my small phone repair business. I have removed all pe
             themeValue = getCookie("theme");
             if (themeValue == "light") {
                 document.getElementsByTagName("link")[0].setAttribute("href", "styles.css");
-            }
-            if (themeValue == "dark") {
+            } else if (themeValue == "dark") {
                 document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
             }
             function toggleTheme() {
