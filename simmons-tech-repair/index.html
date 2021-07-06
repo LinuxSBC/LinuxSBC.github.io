@@ -23,7 +23,7 @@ https://stackoverflow.com/questions/3593594/how-to-keep-the-header-static-always
     <head> <!--Since everything in <head> is nearly identical across pages, I'll only comment it once.-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simmons Tech Repair</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="default.css">
         <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico"> <!--The Material Design phone icon.-->
         <style>
             #home { /*This is here to underline and bold the page you're currently on in the tab strip. It wouldn't work in the centralized CSS file because that applies to every page, not just this one, so I have it here.*/
@@ -58,11 +58,12 @@ https://stackoverflow.com/questions/3593594/how-to-keep-the-header-static-always
                 document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
             } else if (themeValue == "light") {
                 document.getElementsByTagName("link")[0].setAttribute("href", "styles.css");
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-                document.getElementsByTagName("link")[0].setAttribute("href", "styles.css")
             }
+            // } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            //     document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
+            // } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            //     document.getElementsByTagName("link")[0].setAttribute("href", "styles.css")
+            // }
             function toggleTheme() {
                 var theme = document.getElementsByTagName("link")[0];
                 if (theme.getAttribute("href") == "styles.css") {
