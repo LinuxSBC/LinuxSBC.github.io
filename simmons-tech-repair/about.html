@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html> 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simmons Tech Repair</title>
         <link rel="stylesheet" href="default.css">
         <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico">
-            <style>
-            #contact {
+        <style>
+            #about {
                 font-weight: bold;
                 text-decoration: underline;
             }
@@ -34,10 +34,10 @@
                 return "";
             }
             themeValue = getCookie("theme");
-            if (themeValue == "light") {
-                document.getElementsByTagName("link")[0].setAttribute("href", "styles.css");
-            } else if (themeValue == "dark") {
+            if (themeValue == "dark") {
                 document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
+            } else if (themeValue == "light") {
+                document.getElementsByTagName("link")[0].setAttribute("href", "styles.css");
             }
             function toggleTheme() {
                 var theme = document.getElementsByTagName("link")[0];
@@ -69,12 +69,13 @@
             <h2 id="about" class="pages"><a href="about.html">About</a></h2>
         </div>
         <div class="body-segment">
-            <h2>Please contact me for my services.</h2>
-            <ul>
-                <li>Facebook (preferred): <img src="./website-images/Facebook-logo.png"> <a href="https://www.facebook.com/Simmons-Tech-Repair-Monmouth-IL-101092741613487">Simmons Tech Repair, Monmouth, IL</a></li>
-                <li>Email: benedict.p.simmons@gmail.com</li>
-                <li>Phone: (309)-444-6214</li>
-            </ul>
+            <h2>About Me</h2>
+            <p></p>
         </div>
+        <div class="body-segment">
+            <h2>About This Website</h2>
+            <p></p>
+        </div>
+        
     </body>
 </html>
