@@ -1,1 +1,1 @@
-This is a website for my projects and my small tech repair business. It is licensed under GNU GPLv3
+This is a website for my projects and my small tech repair business. It is licensed under GNU GPLv3 and as such is fully open source. The theme is based on Google's Material Design. For the dark/light mode switching, it uses Javascript to switch CSS files. By default, it uses the OS/browser theme, but it uses a cookie to retain a custom choice.
