@@ -54,6 +54,19 @@ a {
     max-width: 500px;
     margin-bottom: 1em;
 }
+.warning-body-segment {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /*This shadow allows for perceived depth in the website.*/
+    background-color: #CF6679;
+    color: black;
+    border-radius: 5px; /*Rounded corners are a Material Design thing.*/
+    margin-left: auto; /*Center it*/
+    margin-right: auto;
+    margin-top: 1em;
+    padding: 5px;
+    padding-top: 1px;
+    max-width: 500px;
+    margin-bottom: 1em;
+}
 #modeSwitchButton {
     background-image: url(website-images/baseline_light_mode_white_18dp.png);
     background-repeat: no-repeat;

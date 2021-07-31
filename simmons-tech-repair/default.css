@@ -40,6 +40,7 @@ You should have received a copy of the GNU General Public License along with thi
     .warning-body-segment {
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /*This shadow allows for perceived depth in the website.*/
         background-color: #B00020;
+        color: white;
         border-radius: 5px; /*Rounded corners are a Material Design thing.*/
         margin-left: auto; /*Center it*/
         margin-right: auto;
@@ -104,6 +105,7 @@ You should have received a copy of the GNU General Public License along with thi
     .warning-body-segment {
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /*This shadow allows for perceived depth in the website.*/
         background-color: #CF6679; /*This color allows for perceived depth in the website.*/
+        color: black;
         border-radius: 5px; /*Rounded corners are a Material Design thing.*/
         margin-left: auto; /*Center it*/
         margin-right: auto;
