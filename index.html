@@ -9,18 +9,12 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
 -->
 <!DOCTYPE html>
-<html> 
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LinuxSBC</title>
         <link rel="stylesheet" href="simmons-tech-repair/default.css">
         <link rel="icon" type="image/x-icon" href="simmons-tech-repair/website-images/favicon.ico">
-        <style>
-            #repairs {
-                font-weight: bold;
-                text-decoration: underline;
-            }
-        </style>
         <script>
             function createCookie(key, value) {
                 const d = new Date();
@@ -34,27 +28,27 @@ You should have received a copy of the GNU General Public License along with thi
                 let ca = decodedCookie.split(";");
                 for(let i=0; i < ca.length; i++) {
                     let c = ca[i];
-                    while (c.charAt(0) == " ") {
+                    while (c.charAt(0) === " ") {
                         c = c.substring(1);
                     }
-                    if (c.indexOf(name) == 0) {
+                    if (c.indexOf(name) === 0) {
                         return c.substring(name.length, c.length)
                     }
                 }
                 return "";
             }
             themeValue = getCookie("theme");
-            if (themeValue == "light") {
+            if (themeValue === "light") {
                 document.getElementsByTagName("link")[0].setAttribute("href", "simmons-tech-repair/styles.css");
-            } else if (themeValue == "dark") {
+            } else if (themeValue === "dark") {
                 document.getElementsByTagName("link")[0].setAttribute("href", "simmons-tech-repair/styles-dark.css")
             }
             function toggleTheme() {
-                var theme = document.getElementsByTagName("link")[0];
-                if (theme.getAttribute("href") == "simmons-tech-repair/styles.css") {
+                const theme = document.getElementsByTagName("link")[0];
+                if (theme.getAttribute("href") === "simmons-tech-repair/styles.css") {
                     theme.setAttribute("href", "simmons-tech-repair/styles-dark.css");
                     createCookie("theme", "dark");
-                } else if (theme.getAttribute("href") == "simmons-tech-repair/styles-dark.css") {
+                } else if (theme.getAttribute("href") === "simmons-tech-repair/styles-dark.css") {
                     theme.setAttribute("href", "simmons-tech-repair/styles.css");
                     createCookie("theme", "light");
                 } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {

@@ -12,7 +12,7 @@ body {
     background-color: #121212; /*Not black because of Material Design guidelines.*/
     padding: 0; /*If I didn't do these two lines, the header bar wouldn't work correctly. It wouldn't touch the edges.*/
     margin: 0;
-    font-family: 'Roboto'; /*Another Material Design thing.*/
+    font-family: 'Roboto', serif; /*Another Material Design thing.*/
     font-weight: normal; /*Another Material Design thing.*/
     font-size: 16px; /*Another Material Design thing.*/
     color: white; /*Text color. If I didn't do this, it would be unreadable.*/
@@ -29,7 +29,7 @@ body {
 h1 {
     font-weight: normal;
     margin-top: 15px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 h2 {
     margin-left: 5px;
@@ -46,26 +46,20 @@ a {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /*This shadow allows for perceived depth in the website.*/
     background-color: rgba(255, 255, 255, 0.05); /*This color allows for perceived depth in the website.*/
     border-radius: 5px; /*Rounded corners are a Material Design thing.*/
-    margin-left: auto; /*Center it*/
-    margin-right: auto;
-    margin-top: 1em;
     padding: 5px;
-    padding-top: 1px;
     max-width: 500px;
-    margin-bottom: 1em;
+    /*Center it*/
+    margin: 1em auto;
 }
 .warning-body-segment {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /*This shadow allows for perceived depth in the website.*/
     background-color: #CF6679;
     color: black;
     border-radius: 5px; /*Rounded corners are a Material Design thing.*/
-    margin-left: auto; /*Center it*/
-    margin-right: auto;
-    margin-top: 1em;
     padding: 5px;
-    padding-top: 1px;
     max-width: 500px;
-    margin-bottom: 1em;
+    /*Center it*/
+    margin: 1em auto;
 }
 #modeSwitchButton {
     background-image: url(website-images/baseline_light_mode_white_18dp.png);
@@ -103,4 +97,19 @@ div > img {
 p {
     margin-left: 5px;
     margin-right: 5px;
+}
+table {
+    margin: 1em auto;
+    border-collapse: collapse;
+    border: thin #BB86FC;
+}
+th {
+    background-color: #2a2a2a;
+    color: #BB86FC;
+    padding: 5px;
+}
+td {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 5px;
 }

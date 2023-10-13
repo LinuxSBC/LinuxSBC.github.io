@@ -1,0 +1,200 @@
+<!--
+linuxsbc.github.io is a website that I use for my projects and my business.
+Copyright (C) 2021 Benedict Simmons
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LinuxSBC</title>
+        <link rel="stylesheet" href="../simmons-tech-repair/default.css">
+        <link rel="icon" type="image/x-icon" href="../simmons-tech-repair/website-images/favicon.ico">
+        <script>
+            function createCookie(key, value) {
+                const d = new Date();
+                d.setTime(d.getTime() + (30*24*60*1000))
+                let expires = "expires="+ d.toUTCString();
+                document.cookie = key + "=" + value + ";" + expires + ";path=/";
+            }
+            function getCookie(key) {
+                let name = key + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(";");
+                for(let i=0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === " ") {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) === 0) {
+                        return c.substring(name.length, c.length)
+                    }
+                }
+                return "";
+            }
+            themeValue = getCookie("theme");
+            if (themeValue === "light") {
+                document.getElementsByTagName("link")[0].setAttribute("href", "../simmons-tech-repair/styles.css");
+            } else if (themeValue === "dark") {
+                document.getElementsByTagName("link")[0].setAttribute("href", "../simmons-tech-repair/styles-dark.css")
+            }
+            function toggleTheme() {
+                var theme = document.getElementsByTagName("link")[0];
+                if (theme.getAttribute("href") === "../simmons-tech-repair/styles.css") {
+                    theme.setAttribute("href", "../simmons-tech-repair/styles-dark.css");
+                    createCookie("theme", "dark");
+                } else if (theme.getAttribute("href") === "../simmons-tech-repair/styles-dark.css") {
+                    theme.setAttribute("href", "../simmons-tech-repair/styles.css");
+                    createCookie("theme", "light");
+                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    theme.setAttribute("href", "../simmons-tech-repair/styles.css");
+                    createCookie("theme", "light");
+                } else {
+                    theme.setAttribute("href", "../simmons-tech-repair/styles-dark.css");
+                    createCookie("theme", "dark");
+                }
+            }
+
+            function disableContents() {
+                document.getElementById("numGroups").disabled = false;
+                document.getElementById("numInGroup").disabled = true;
+            }
+
+            function disableNumber() {
+                document.getElementById("numGroups").disabled = true;
+                document.getElementById("numInGroup").disabled = false;
+            }
+
+            function randomize() {
+                let groups = [];
+
+                const total = document.getElementById("numPeople").value;
+                let students = [];
+                for (let i = 1; i <= total; i++) {
+                    students.push(i);
+                }
+
+                const radio = document.querySelector('input[type="radio"][name="contentsOrNumber"]:checked');
+                const selection = radio.value;
+                if (selection === "number") {
+                    const numGroups = document.getElementById("numGroups").value;
+                    groups = sortIntoGroups(students, numGroups);
+                } else if (selection === "contents") {
+                    const numInGroup = document.getElementById("numInGroup").value;
+                    const numGroups = Math.ceil(total / numInGroup); // Better to have too many groups than too few?
+                    groups = sortIntoGroups(students, numGroups);
+                }
+
+                if (document.getElementById("groups") == null) {
+                    makeTable(groups);
+                } else {
+                    resetTable(groups);
+                }
+
+                return groups;
+            }
+
+            function resetTable(groups) {
+                const div = document.getElementById("groups");
+                div.remove();
+                makeTable(groups);
+            }
+
+            function makeTable(groups) {
+                const div = document.createElement("div");
+                div.setAttribute("class", "body-segment");
+                div.setAttribute("id", "groups")
+                document.body.appendChild(div);
+                const table = document.createElement("table");
+                div.appendChild(table);
+                const thead = document.createElement("thead");
+                table.appendChild(thead);
+                const tbody = document.createElement("tbody");
+                table.appendChild(tbody);
+                for (let i = 0; i < groups.length; i++) {
+                    const th = document.createElement("th");
+                    th.innerHTML = "Group " + (i+1);
+                    thead.appendChild(th);
+                }
+                for (let i = 0; i < groups[0].length; i++) {
+                    const tr = document.createElement("tr");
+                    for (let j = 0; j < groups.length; j++) {
+                        if (groups[j][i] == null) {
+                            break;
+                        }
+                        const td = document.createElement("td");
+                        td.innerHTML = groups[j][i];
+                        tr.appendChild(td);
+                    }
+                    tbody.appendChild(tr);
+                }
+                table.setAttribute("border", "1")
+            }
+
+            function sortIntoGroups(students, numGroups) {
+                let groups = [];
+
+                for (let i = 0; i < numGroups; i++) {
+                    groups.push([]);
+                }
+
+                students = shuffle(students);
+
+                for (let i = 0; i < students.length; i++) {
+                    groups[i % numGroups].push(students[i]);
+                }
+
+                return groups;
+            }
+
+            function shuffle(array) {
+                let currentIndex = array.length,  randomIndex;
+
+                // While there remain elements to shuffle.
+                while (currentIndex > 0) {
+
+                // Pick a remaining element.
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+                }
+
+                return array;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="heading">
+            <h1 style="margin: 15px;">Group Randomizer</h1>
+            <button onclick="toggleTheme()" title="Switch theme" id="modeSwitchButton"></button>
+        </div>
+        <div class="body-segment">
+            <label for="numPeople">Total number of students</label>
+            <input type="number" id="numPeople" value="15" style="width: 40px">
+        </div>
+        <div class="body-segment">
+            <input type="radio" id="number" name="contentsOrNumber" value="number" onclick="disableContents()" checked="checked">
+            <label for="number">
+                Number of groups
+                <input type="number" id="numGroups" value="5" min="1" style="width: 40px">
+            </label>
+            <br>
+            <input type="radio" id="contents" name="contentsOrNumber" value="contents" onclick="disableNumber()">
+            <label for="contents">
+                Number of students in each group
+                <input type="number" id="numInGroup" value="3" min="1" style="width: 40px" disabled="disabled">
+            </label>
+        </div>
+        <div class="body-segment">
+            <button onclick="randomize()">Randomize</button>
+        </div>
+    </body>
+</html>
