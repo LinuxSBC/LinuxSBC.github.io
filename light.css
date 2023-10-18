@@ -8,100 +8,27 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
 */
+@import "common.css";
 body {
     background-color: white;
-    padding: 0; /*If I didn't do these two lines, the header bar wouldn't work correctly. It wouldn't touch the edges.*/
-    margin: 0;
-    font-family: 'Roboto', serif; /*Another Material Design thing.*/
-    font-weight: normal; /*Another Material Design thing.*/
-    font-size: 16px; /*Another Material Design thing.*/
 }
 #heading {
     background-color: #6200EE; /*This is a Material Design color and purple is my favorite color so I chose it.*/
     color: white;
-    text-align: center;
-    padding: 1px;
-    box-shadow: 0 3px 5px #000000;
-    position: sticky;
-    top: -80px;
-}
-h1 {
-    font-weight: normal;
-    margin-top: 15px;
-    margin-bottom: 0;
-}
-h2 {
-    margin-left: 5px;
-    font-weight: normal;
-    font-size: 20px;
-}
-#subtitle {
-    margin: 0;
-}
-.body-segment {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /*This shadow allows for perceived depth in the website.*/
-    border-radius: 5px; /*Rounded corners are a Material Design thing.*/
-    padding: 5px;
-    max-width: 500px;
-    /*Center it*/
-    margin: 1em auto;
 }
 .warning-body-segment {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /*This shadow allows for perceived depth in the website.*/
     background-color: #B00020;
     color: white;
-    border-radius: 5px; /*Rounded corners are a Material Design thing.*/
-    padding: 5px;
-    max-width: 500px;
-    /*Center it*/
-    margin: 1em auto;
 }
 #modeSwitchButton {
     background-image: url(/baseline_dark_mode_white_18dp.png);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: transparent;
-    height: 36px;
-    width: 36px;
-    border: none;
-    cursor: pointer;
-    position: fixed; /*Make it stay in the same place while the rest of the navbar moves up*/
-    right: 5px;
-    top: 5px;
-}
-form {
-    margin: 5px;
-}
-.pages {
-    display: inline-block;
-    margin-right: 1em;
 }
 .pages > a {
-    text-decoration: none;
     color: white;
 }
-div > img {
-    max-width: 48%; /*This whole thing is making the images look correct. They have rounded corners, are centered, have padding, and are the right size.*/
-    max-height: 320px;
-    border-radius: 5px;
-    padding: 2px;
-}
-.example-images {
-    text-align: center;
-}
-p {
-    margin-left: 5px;
-    margin-right: 5px;
-}
 table {
-    margin: 1em auto;
-    border-collapse: collapse;
     border: thin black;
 }
 th {
     background-color: lightgray;
-    padding: 5px;
-}
-td {
-    padding: 5px;
 }
