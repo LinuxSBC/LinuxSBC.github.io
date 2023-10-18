@@ -13,53 +13,9 @@ You should have received a copy of the GNU General Public License along with thi
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LinuxSBC</title>
-        <link rel="stylesheet" href="simmons-tech-repair/default.css">
+        <link rel="stylesheet" href="/light.css">
         <link rel="icon" type="image/x-icon" href="simmons-tech-repair/website-images/favicon.ico">
-        <script>
-            function createCookie(key, value) {
-                const d = new Date();
-                d.setTime(d.getTime() + (30*24*60*1000))
-                let expires = "expires="+ d.toUTCString();
-                document.cookie = key + "=" + value + ";" + expires + ";path=/";
-            }
-            function getCookie(key) {
-                let name = key + "=";
-                let decodedCookie = decodeURIComponent(document.cookie);
-                let ca = decodedCookie.split(";");
-                for(let i=0; i < ca.length; i++) {
-                    let c = ca[i];
-                    while (c.charAt(0) === " ") {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) === 0) {
-                        return c.substring(name.length, c.length)
-                    }
-                }
-                return "";
-            }
-            themeValue = getCookie("theme");
-            if (themeValue === "light") {
-                document.getElementsByTagName("link")[0].setAttribute("href", "simmons-tech-repair/styles.css");
-            } else if (themeValue === "dark") {
-                document.getElementsByTagName("link")[0].setAttribute("href", "simmons-tech-repair/styles-dark.css")
-            }
-            function toggleTheme() {
-                const theme = document.getElementsByTagName("link")[0];
-                if (theme.getAttribute("href") === "simmons-tech-repair/styles.css") {
-                    theme.setAttribute("href", "simmons-tech-repair/styles-dark.css");
-                    createCookie("theme", "dark");
-                } else if (theme.getAttribute("href") === "simmons-tech-repair/styles-dark.css") {
-                    theme.setAttribute("href", "simmons-tech-repair/styles.css");
-                    createCookie("theme", "light");
-                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    theme.setAttribute("href", "simmons-tech-repair/styles.css");
-                    createCookie("theme", "light");
-                } else {
-                    theme.setAttribute("href", "simmons-tech-repair/styles-dark.css");
-                    createCookie("theme", "dark");
-                }
-            }
-        </script>
+        <script type="text/javascript" src="/common.js"></script>
     </head>
     <body>
         <div id="heading">
@@ -67,7 +23,7 @@ You should have received a copy of the GNU General Public License along with thi
             <button onclick="toggleTheme()" title="Switch theme" id="modeSwitchButton"></button>
         </div>
         <div class="body-segment">
-            <a href="simmons-tech-repair/index.html"><h2>Simmons Tech Repair, Monmouth, IL</h2></a>
+            <a href="/simmons-tech-repair/index.html"><h2>Simmons Tech Repair, Monmouth, IL</h2></a>
         </div>
     </body>
 </html>

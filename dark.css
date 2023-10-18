@@ -62,7 +62,7 @@ a {
     margin: 1em auto;
 }
 #modeSwitchButton {
-    background-image: url(website-images/baseline_light_mode_white_18dp.png);
+    background-image: url(/baseline_light_mode_white_18dp.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-color: transparent;

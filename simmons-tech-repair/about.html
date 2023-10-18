@@ -9,11 +9,11 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simmons Tech Repair</title>
-        <link rel="stylesheet" href="default.css">
+        <link rel="stylesheet" href="/light.css">
         <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico">
         <style>
             #about {
@@ -21,51 +21,7 @@ You should have received a copy of the GNU General Public License along with thi
                 text-decoration: underline;
             }
         </style>
-        <script>
-            function createCookie(key, value) {
-                const d = new Date();
-                d.setTime(d.getTime() + (30*24*60*1000))
-                let expires = "expires="+ d.toUTCString();
-                document.cookie = key + "=" + value + ";" + expires + ";path=/";
-            }
-            function getCookie(key) {
-                let name = key + "=";
-                let decodedCookie = decodeURIComponent(document.cookie);
-                let ca = decodedCookie.split(";");
-                for(let i=0; i < ca.length; i++) {
-                    let c = ca[i];
-                    while (c.charAt(0) == " ") {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                        return c.substring(name.length, c.length)
-                    }
-                }
-                return "";
-            }
-            themeValue = getCookie("theme");
-            if (themeValue == "light") {
-                document.getElementsByTagName("link")[0].setAttribute("href", "styles.css");
-            } else if (themeValue == "dark") {
-                document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
-            }
-            function toggleTheme() {
-                var theme = document.getElementsByTagName("link")[0];
-                if (theme.getAttribute("href") == "styles.css") {
-                    theme.setAttribute("href", "styles-dark.css");
-                    createCookie("theme", "dark");
-                } else if (theme.getAttribute("href") == "styles-dark.css") {
-                    theme.setAttribute("href", "styles.css");
-                    createCookie("theme", "light");
-                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    theme.setAttribute("href", "styles.css");
-                    createCookie("theme", "light");
-                } else {
-                    theme.setAttribute("href", "styles-dark.css");
-                    createCookie("theme", "dark");
-                }
-            }
-        </script>
+        <script type="text/javascript" src="/common.js"></script>
     </head>
     <body>
         <div id="heading">
@@ -91,7 +47,7 @@ You should have received a copy of the GNU General Public License along with thi
                 
                 With that, I started learning about phones. As the phone was four years old by that point, I needed to change some things to get it working optimally. I learned that the battery should be replaced every few years on smartphones because batteries degrade. Luckily, this phone had an easily removable battery and a removable back, so I didn't yet have to learn how to take apart phones (I was only 12). I then replaced the battery and worked on installing a custom ROM (a custom version of Android) so it would act newer. Unfortunately, it was a Verizon model, an SCH-I545. Verizon prevents their phones from being modified. There were a few workarounds, but they couldn't install anything newer than Android 5.1 and it had to be running TouchWiz, a very slow and bloated set of software used by Samsung at the time. Still, this taught me a lot about the workings of ADB, Fastboot, and the software and firmware of Android phones. <br><br>
                 
-                Skipping over several years where I continued learning, I eventually bought a used Nexus 6p for myself and my brothers, costing $80. This was a much better phone and it did support custom ROMs, though it required a more difficult disassembly to replace the battery. We still use it today and it's one of the most difficult battery replacements on any phone I've done, though some iPads were worse. That battery replacement was the first phone repair I ever performed. It made me realize that phone repairs were possible without tons of specialized tools and knowledge (if someody is thinking of getting into repair, I would recommend iFixit's tools and guides). At that time, my parents had original Google Pixels (their HTC One M9s broke before I knew I could replace parts). Unlike the Nexus 6P, which opens from the back, the Google Pixel required a screen removal to access the insides, much like an iPhone. When one of the Google Pixels had a battery issue, I had to learn how to remove a phone screen. Unfortunately, I broke it while removing it, so we needed to replace the screen as well. The battery replacement and screen installation was much easier than the screen removal, so it all turned out fine. At some point, I needed to replace the battery on the other phone, and this time the screen removal was successful! I replaced parts on a few more phones when I needed to, including an iPhone 6s that my grandparents had recently upgraded from and gifted to my family. <br><br>
+                Skipping over several years in which I continued learning, I eventually bought a used Nexus 6p for myself and my brothers, costing $80. This was a much better phone and it did support custom ROMs, though it required a more difficult disassembly to replace the battery. We still use it today and it's one of the most difficult battery replacements on any phone I've done, though some iPads were worse. That battery replacement was the first phone repair I ever performed. It made me realize that phone repairs were possible without tons of specialized tools and knowledge (if someody is thinking of getting into repair, I would recommend iFixit's tools and guides). At that time, my parents had original Google Pixels (their HTC One M9s broke before I knew I could replace parts). Unlike the Nexus 6P, which opens from the back, the Google Pixel required a screen removal to access the insides, much like an iPhone. When one of the Google Pixels had a battery issue, I had to learn how to remove a phone screen. Unfortunately, I broke it while removing it, so we needed to replace the screen as well. The battery replacement and screen installation was much easier than the screen removal, so it all turned out fine. At some point, I needed to replace the battery on the other phone, and this time the screen removal was successful! I replaced parts on a few more phones when I needed to, including an iPhone 6s that my grandparents had recently upgraded from and gifted to my family. <br><br>
                 
                 In January of 2020, I salvaged a 10-year-old desktop motherboard for free and soldered on a new MOSFET to replace the broken one that prevented the motherboard from working. I then got interested in building desktop computers and assembled a cheap computer around that motherboard. All of the research I did for that gave me much more information about desktops. In May of 2020, I realized that I would need to buy a laptop for the school I would be attending (Illinois Math and Science Academy in Aurora), so I had to get a better-paying job that hopefully had flexible hours. I eventually realized that I knew how to replace phone parts, and I knew a lot about other devices and troubleshooting, so I decided to start a repair business. </p>
         </div>

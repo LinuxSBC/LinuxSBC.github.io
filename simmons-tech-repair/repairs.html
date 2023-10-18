@@ -9,11 +9,11 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
 -->
 <!DOCTYPE html>
-<html> 
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simmons Tech Repair</title>
-        <link rel="stylesheet" href="default.css">
+        <link rel="stylesheet" href="/light.css">
         <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico">
         <style>
             #repairs {
@@ -21,51 +21,7 @@ You should have received a copy of the GNU General Public License along with thi
                 text-decoration: underline;
             }
         </style>
-        <script>
-            function createCookie(key, value) {
-                const d = new Date();
-                d.setTime(d.getTime() + (30*24*60*1000))
-                let expires = "expires="+ d.toUTCString();
-                document.cookie = key + "=" + value + ";" + expires + ";path=/";
-            }
-            function getCookie(key) {
-                let name = key + "=";
-                let decodedCookie = decodeURIComponent(document.cookie);
-                let ca = decodedCookie.split(";");
-                for(let i=0; i < ca.length; i++) {
-                    let c = ca[i];
-                    while (c.charAt(0) == " ") {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                        return c.substring(name.length, c.length)
-                    }
-                }
-                return "";
-            }
-            themeValue = getCookie("theme");
-            if (themeValue == "light") {
-                document.getElementsByTagName("link")[0].setAttribute("href", "styles.css");
-            } else if (themeValue == "dark") {
-                document.getElementsByTagName("link")[0].setAttribute("href", "styles-dark.css")
-            }
-            function toggleTheme() {
-                var theme = document.getElementsByTagName("link")[0];
-                if (theme.getAttribute("href") == "styles.css") {
-                    theme.setAttribute("href", "styles-dark.css");
-                    createCookie("theme", "dark");
-                } else if (theme.getAttribute("href") == "styles-dark.css") {
-                    theme.setAttribute("href", "styles.css");
-                    createCookie("theme", "light");
-                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    theme.setAttribute("href", "styles.css");
-                    createCookie("theme", "light");
-                } else {
-                    theme.setAttribute("href", "styles-dark.css");
-                    createCookie("theme", "dark");
-                }
-            }
-        </script>
+        <script type="text/javascript" src="/common.js"></script>
     </head>
     <body>
         <div id="heading">
@@ -84,8 +40,8 @@ You should have received a copy of the GNU General Public License along with thi
                 A few days ago, I replaced the screen on an iPhone X. There were bright green and white lines going up the screen. If you need me to fix your device, please contact me.
             </p>
             <div class="example-images">
-                <img src="previous-repair-images/6-30-21.1.jpg">
-                <img src="previous-repair-images/6-30-21.2.jpg">
+                <img src="previous-repair-images/6-30-21.1.jpg" alt="Phone with bright vertical lines on the screen from damage">
+                <img src="previous-repair-images/6-30-21.2.jpg" alt="Repaired phone">
             </div>
         </div>
         <div class="body-segment">
@@ -99,9 +55,9 @@ You should have received a copy of the GNU General Public License along with thi
                 Please contact me if you need a phone or computer repaired!
             </p>
             <div class="example-images">
-                <img src="./previous-repair-images/6-22-21.2.jpg">
-                <img src="./previous-repair-images/6-22-21.1.jpg">
-                <img src="./previous-repair-images/6-22-21.3.jpg">
+                <img src="./previous-repair-images/6-22-21.2.jpg" alt="Phone with a cracked screen">
+                <img src="./previous-repair-images/6-22-21.1.jpg" alt="Repaired phone">
+                <img src="./previous-repair-images/6-22-21.3.jpg" alt="Me working on the phone">
             </div>
         </div>
         <div class="body-segment">
@@ -110,7 +66,7 @@ You should have received a copy of the GNU General Public License along with thi
                 My semester is ending on Tuesday, June 1st, so I am restarting my business. Please private message me if you need a computer repaired, a phone screen replaced, or a device (laptop, desktop, tablet, phone, etc) researched and selected. In the photo below, I am replacing the hard drive of an iMac with an SSD. Thank you for your business!
             </p>
             <div class="example-images">
-                <img src="./previous-repair-images/5-29-21.1.jpg">
+                <img src="./previous-repair-images/5-29-21.1.jpg" alt="Me screwing in a screw to a replacement drive for an iMac">
             </div>
         </div>
         <div class="body-segment"> <!--Just a simple list of previous jobs. I've added some styling for the images in the CSS files.-->
@@ -125,7 +81,7 @@ You should have received a copy of the GNU General Public License along with thi
                 I recently replaced the battery on an iPhone 7. Devices like phones and laptops naturally lose battery capacity as they age. That can be fixed. Tell me if you need me to replace your device's battery.
             </p>
             <div class="example-images">
-                <img src="./previous-repair-images/7-18-20.1.jpg">
+                <img src="./previous-repair-images/7-18-20.1.jpg" alt="A working phone">
             </div>
         </div>
         <div class="body-segment">
@@ -134,8 +90,8 @@ You should have received a copy of the GNU General Public License along with thi
                 I repaired a Nexus 6P on which the battery was failing. The battery swelled, pushing up the screen and eventually disconnecting some parts inside the phone (see pictures). A swelling battery with pressure on it is a fire hazard. That was the main cause of the Note 7 explosions in the news a few years ago. As well as being a fire hazard, a swelling battery could cause the screen to break or allow dirt to get inside the phone. Even if the screen or back isn't coming off, batteries age by losing capacity. If your phone's screen or back is coming off or doesn't hold a charge as well as it used to, the battery probably needs to be replaced. Contact me if you need me to replace your device's battery.
             </p>
             <div class="example-images">
-                <img src="./previous-repair-images/6-14-20.1.jpg">
-                <img src="./previous-repair-images/6-14-20.2.jpg">
+                <img src="./previous-repair-images/6-14-20.1.jpg" alt="An open phone with a swollen battery">
+                <img src="./previous-repair-images/6-14-20.2.jpg" alt="That same phone with the screen lifted up from the swollen battery">
             </div>
         </div>
         <div class="body-segment">
@@ -144,8 +100,8 @@ You should have received a copy of the GNU General Public License along with thi
                 I replaced a phone's screen that had been completely shattered. There was glass dust falling out of it and turning it on would only turn on the backlight as shown in the first photo. If your phone's screen is cracked, contact me!
             </p>
             <div class="example-images">
-                <img src="./previous-repair-images/6-9-20.1.jpg">
-                <img src="./previous-repair-images/6-9-20.2.jpg">
+                <img src="./previous-repair-images/6-9-20.1.jpg" alt="Phone with a shattered screen">
+                <img src="./previous-repair-images/6-9-20.2.jpg" alt="Repaired phone">
             </div>
         </div>
         <div class="body-segment">
@@ -154,7 +110,7 @@ You should have received a copy of the GNU General Public License along with thi
                 I recently replaced the battery on an iPad. The battery was swelling and stopped holding a charge as well. If your device's battery isn't lasting as long as it used to, let me know!
             </p>
             <div class="example-images">
-                <img src="./previous-repair-images/6-7-20.1.jpg">
+                <img src="./previous-repair-images/6-7-20.1.jpg" alt="Working iPad">
             </div>
         </div>
         <div class="body-segment">
@@ -166,11 +122,11 @@ You should have received a copy of the GNU General Public License along with thi
         <div class="body-segment">
             <p>
                 5/27/20<br>
-                Yesterday, I fixed the screen on an iPhone 8 Plus. The screen was cracked near the bottom but I replaced it. Contact me if you need a screen replaced!
+                Yesterday, I fixed the screen on an iPhone 8 Plus. The screen was cracked near the bottom, but I replaced it. Contact me if you need a screen replaced!
             </p>
             <div class="example-images">
-                <img src="./previous-repair-images/5-27-20.1.jpg">
-                <img src="./previous-repair-images/5-27-20.2.jpg">
+                <img src="./previous-repair-images/5-27-20.1.jpg" alt="Phone with a cracked screen">
+                <img src="./previous-repair-images/5-27-20.2.jpg" alt="Repaired phone">
             </div>
         </div>
         <div class="body-segment">
@@ -179,7 +135,7 @@ You should have received a copy of the GNU General Public License along with thi
                 Yesterday, I fixed a laptop whose screen was not turning on reliably. It is now connected and working. Contact me if you have a device that is giving you problems.
             </p>
             <div class="example-images">
-                <img src="./previous-repair-images/5-21-20.1.jpg">
+                <img src="./previous-repair-images/5-21-20.1.jpg" alt="Repaired laptop">
             </div>
         </div>
         <div class="body-segment">
@@ -188,8 +144,8 @@ You should have received a copy of the GNU General Public License along with thi
                 Two days ago, I fixed a broken screen on an iPad Air 1. Everything now works perfectly. If you have a device with a broken screen, let me know!
             </p>
             <div class="example-images">
-                <img src="./previous-repair-images/5-21-20.2.jpg">
-                <img src="./previous-repair-images/5-21-20.3.jpg">
+                <img src="./previous-repair-images/5-21-20.2.jpg" alt="iPad with a cracked screen">
+                <img src="./previous-repair-images/5-21-20.3.jpg" alt="Repaired iPad">
             </div>
         </div>
     </body>
