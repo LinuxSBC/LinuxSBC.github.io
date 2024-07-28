@@ -1,0 +1,47 @@
+<!--
+linuxsbc.github.io is a website that I use for my projects and my business.
+Copyright (C) 2021 Benedict Simmons
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head> <!--Since everything in <head> is nearly identical across pages, I'll only comment it once.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simmons Tech Repair</title>
+        <link rel="stylesheet" href="/light.css">
+        <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico"> <!--The Material Design phone icon.-->
+        <style>
+            #home { /*This is here to underline and bold the page you're currently on in the tab strip. It wouldn't work in the centralized CSS file because that applies to every page, not just this one, so I have it here.*/
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+        <script type="text/javascript" src="/common.js"></script>
+    </head>
+    <body>
+        <div id="heading">
+            <h1>Simmons Tech Repair</h1>
+            <button onclick="toggleTheme()" title="Switch theme" id="modeSwitchButton"></button>
+            <h2 id="subtitle">Monmouth, IL</h2>
+            <h2 id="home" class="pages"><a href="index.html">Home</a></h2>
+            <h2 id="pricing" class="pages"><a href="pricing.html">Pricing</a></h2>
+            <h2 id="repairs" class="pages"><a href="repairs.html">Previous Repairs</a></h2>
+            <h2 id="contact" class="pages"><a href="contact.html">Contact</a></h2>
+            <h2 id="about" class="pages"><a href="about.html">About</a></h2>
+        </div>
+        <div class="body-segment"> <!--The body-segment class is basically for each "chunk" of information. It follows Material Design guidelines as well as I could manage.-->
+            <p>I can replace screens and batteries on mobile devices as well as troubleshooting and repairing most devices.* I can also upgrade desktops and some laptops to make them faster. I am able to build or select computers as well. If I can't figure out the problem with your device, you don't need to pay. Free estimates are available. If you want me to repair a device, please contact me.<br><br>
+            * I am currently not repairing iPads and the backs of iPhones. iPads are just difficult and fragile, and Apple permanently glues the back glass to their phones. There may be other devices that I decline, but this is just a general idea.</p>
+        </div>
+        <div class="body-segment">
+            <img src="./website-images/6-9-20.1.jpg" alt="A phone with a shattered screen"> <!--I've date-coded each image and put them in specific folders.-->
+            <img src="./website-images/6-9-20.2.jpg" alt="The same phone, now repaired">
+        </div>
+        
+    </body>
+</html>

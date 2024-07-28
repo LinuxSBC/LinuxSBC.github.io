@@ -1,0 +1,60 @@
+<!--
+linuxsbc.github.io is a website that I use for my projects and my business.
+Copyright (C) 2021 Benedict Simmons
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simmons Tech Repair</title>
+        <link rel="stylesheet" href="/light.css">
+        <link rel="icon" type="image/x-icon" href="./website-images/favicon.ico">
+        <style>
+            #about {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+        <script type="text/javascript" src="/common.js"></script>
+    </head>
+    <body>
+        <div id="heading">
+            <h1>Simmons Tech Repair</h1>
+            <button onclick="toggleTheme()" title="Switch theme" id="modeSwitchButton"></button>
+            <h2 id="subtitle">Monmouth, IL</h2>
+            <h2 id="home" class="pages"><a href="index.html">Home</a></h2>
+            <h2 id="pricing" class="pages"><a href="pricing.html">Pricing</a></h2>
+            <h2 id="repairs" class="pages"><a href="repairs.html">Previous Repairs</a></h2>
+            <h2 id="contact" class="pages"><a href="contact.html">Contact</a></h2>
+            <h2 id="about" class="pages"><a href="about.html">About</a></h2>
+        </div>
+        <div class="body-segment">
+            <h2>About Me</h2>
+            <p>
+                Tl;dr:<br>
+                My name is Ben Simmons, and I am a rising senior at the <a href="https://www.imsa.edu/" target="_blank">Illinois Math and Science Academy</a> high school in Aurora, Illinois. I am the owner and operator of Simmons Tech Repair in Monmouth, Illinois. I know a lot about software, firmware, and hardware of many devices, including smartphones, laptops, and desktops, and I provide services related to problems with each one. <br><br>
+
+                Full length:<br>
+                My name is Ben Simmons, and I am a rising senior at the <a href="https://www.imsa.edu/" target="_blank">Illinois Math and Science Academy</a> high school in Aurora, Illinois. I am the owner and operator of Simmons Tech Repair in Monmouth, Illinois. <br><br>
+                
+                My interest in computers stems from when I was about 10 years old, and I have developed my knowledge of hardware and software since then. At that time, I became interested in electronics and programmed an Arduino Uno to allow for computer logic in my projects. This required a computer to program it and I couldn't always use my mother's computer, so I received a Raspberry Pi 2B for my birthday the next year. With that, I started learning about computers. It ran Linux instead of Windows or MacOS. This was not any harder to use than Windows or MacOS would be, but Linux allows for much more modification, so I grew interested in modifying computers. This led to a much deeper understanding of how computers work than I would otherwise have. I was eventually gifted other computers which I installed Linux on and used. This understanding of the inner workings of computers and a familiarity with troubleshooting meant that I started fixing electronic devices in our house, leading to more knowledge about other systems. At one point, the screen on my mom's phone (a Samsung Galaxy S4) broke. I was still unable to fix it at the time, so she had to get a "new" (used) phone, an HTC One M9. To make things easier, my dad bought an identical phone and passed his previous phone (Samsung Galaxy S4) down to me with a cheap TracFone subscription for communication. <br><br>
+                
+                With that, I started learning about phones. As the phone was four years old by that point, I needed to change some things to get it working optimally. I learned that the battery should be replaced every few years on smartphones because batteries degrade. Luckily, this phone had an easily removable battery and a removable back, so I didn't yet have to learn how to take apart phones (I was only 12). I then replaced the battery and worked on installing a custom ROM (a custom version of Android) so it would act newer. Unfortunately, it was a Verizon model, an SCH-I545. Verizon prevents their phones from being modified. There were a few workarounds, but they couldn't install anything newer than Android 5.1 and it had to be running TouchWiz, a very slow and bloated set of software used by Samsung at the time. Still, this taught me a lot about the workings of ADB, Fastboot, and the software and firmware of Android phones. <br><br>
+                
+                Skipping over several years in which I continued learning, I eventually bought a used Nexus 6p for myself and my brothers, costing $80. This was a much better phone and it did support custom ROMs, though it required a more difficult disassembly to replace the battery. We still use it today and it's one of the most difficult battery replacements on any phone I've done, though some iPads were worse. That battery replacement was the first phone repair I ever performed. It made me realize that phone repairs were possible without tons of specialized tools and knowledge (if someody is thinking of getting into repair, I would recommend iFixit's tools and guides). At that time, my parents had original Google Pixels (their HTC One M9s broke before I knew I could replace parts). Unlike the Nexus 6P, which opens from the back, the Google Pixel required a screen removal to access the insides, much like an iPhone. When one of the Google Pixels had a battery issue, I had to learn how to remove a phone screen. Unfortunately, I broke it while removing it, so we needed to replace the screen as well. The battery replacement and screen installation was much easier than the screen removal, so it all turned out fine. At some point, I needed to replace the battery on the other phone, and this time the screen removal was successful! I replaced parts on a few more phones when I needed to, including an iPhone 6s that my grandparents had recently upgraded from and gifted to my family. <br><br>
+                
+                In January of 2020, I salvaged a 10-year-old desktop motherboard for free and soldered on a new MOSFET to replace the broken one that prevented the motherboard from working. I then got interested in building desktop computers and assembled a cheap computer around that motherboard. All of the research I did for that gave me much more information about desktops. In May of 2020, I realized that I would need to buy a laptop for the school I would be attending (Illinois Math and Science Academy in Aurora), so I had to get a better-paying job that hopefully had flexible hours. I eventually realized that I knew how to replace phone parts, and I knew a lot about other devices and troubleshooting, so I decided to start a repair business. </p>
+        </div>
+        <div class="body-segment">
+            <h2>About This Website</h2>
+            <p>This website was hand-coded without any web design platform like WordPress. The design is inspired by Google's Material Design. It is fully open source under the GNU GPLv3 license. You can find the source code at <a href="https://github.com/LinuxSBC/LinuxSBC.github.io/tree/main/simmons-tech-repair" target="_blank" style="overflow-wrap: anywhere;">https://github.com/LinuxSBC/LinuxSBC.github.io/tree/main/simmons-tech-repair</a>. It is hosted by Github Pages, a free DNS and web hosting service for static web pages.</p>
+        </div>
+        
+    </body>
+</html>
